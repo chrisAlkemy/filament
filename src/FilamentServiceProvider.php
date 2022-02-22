@@ -160,22 +160,22 @@ class FilamentServiceProvider extends ServiceProvider
     protected function configure()
     {
         $this->app->booted(function () {
-            $this->app['config']->set('auth.guards.filament', [
-                'driver' => 'session',
-                'provider' => 'filament_users',
-            ]);
+            // $this->app['config']->set('auth.guards.filament', [
+            //     'driver' => 'session',
+            //     'provider' => 'filament_users',
+            // ]);
 
-            $this->app['config']->set('auth.passwords.filament_users', [
-                'provider' => 'filament_users',
-                'table' => 'filament_password_resets',
-                'expire' => 60,
-                'throttle' => 60,
-            ]);
+            // $this->app['config']->set('auth.passwords.filament_users', [
+            //     'provider' => 'filament_users',
+            //     'table' => 'filament_password_resets',
+            //     'expire' => 60,
+            //     'throttle' => 60,
+            // ]);
 
-            $this->app['config']->set('auth.providers.filament_users', [
-                'driver' => 'eloquent',
-                'model' => User::class,
-            ]);
+            // $this->app['config']->set('auth.providers.filament_users', [
+            //     'driver' => 'eloquent',
+            //     'model' => User::class,
+            // ]);
 
             $this->app['config']->set('forms', [
                 'default_attachment_upload_route' => 'filament.form-attachments.upload',
